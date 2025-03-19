@@ -1,5 +1,7 @@
 # CLI Node Run Full Guide (PC and VPS for Both)
 
+### Offical Docs Guide - https://docs.inference.supply/quick-start
+
 ## Make Account
 
 1. Register at [kuzco.xyz/register](https://kuzco.xyz/register)
