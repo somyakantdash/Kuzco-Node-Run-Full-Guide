@@ -1,44 +1,98 @@
 # Hardware Requirements 
 
-Official Docs: https://docs.0g.ai/run-a-node/overview
+Official Docs: https://docs.inference.supply/hardware
 
-## Storage Node Hardware Requirements 
+**Minimum System Requirements**
 
-In the 0G network, storage nodes play a vital role in maintaining the system's decentralized storage layer. They are responsible for storing and serving data, ensuring data availability and reliability across the network. By running a storage node, you actively contribute to the network and earn rewards for your participation.
-This guide details the process of running a storage node, including hardware specifications and interaction with on-chain contracts.
+- A GPU in the list below with **at least 8GB of VRAM**
+- 8GB RAM
+- 30GB free disk space
+- Reliable 100Mbps+ network bandwidth. Test it here: [Fast.com](https://fast.com/)
 
-| Component | Storage Node | Storage KV |
-|-----------|--------------|------------|
-| Memory    | 16 GB RAM    | 4 GB RAM   |
-| CPU       | 4 cores      | 4 cores    |
-| Disk      | 500GB / 1TB NVMe SSD | Size matches the KV streams it maintains |
-| Bandwidth | 100 Mbps (Download / Upload) | - |
+## Supported Apple Silicon Chips
 
-:::note
-- For Storage Node: The NVMe SSD ensures fast read/write operations, critical for efficient blob storage and retrieval.
-- For Storage KV: The disk size requirement is flexible and should be adjusted based on the volume of KV streams you intend to maintain.
+Kuzco supports a range of Apple Silicon chips, provided they meet the following minimum system requirements:
 
-## Data Availability Node Hardware Requirements
+- **8GB RAM**
+- **30GB free disk space**
+- **Reliable 100Mbps+ network bandwidth**
 
-To operate effectively, your DA signer needs to run a DA node to verify encoded blob data, sign it, and store it for future farming and rewards. Currently, to run a DA Node on Testnet, users must stake 10 A0GI tokens. These can be obtained through our [faucet](https://faucet.0g.ai/) or via rewards from running Storage Nodes or Validator Nodes. You can also reach out to our technical moderators on [Discord](https://discord.com/invite/0glabs).
+| Chip Series | Variants                   | Notes                                                                 |
+|-------------|---------------------------|-----------------------------------------------------------------------|
+| M1          | M1, M1 Pro, M1 Max, M1 Ultra | Fully supported                                                       |
+| M2          | M2, M2 Pro, M2 Max, M2 Ultra | Fully supported                                                       |
+| M3          | M3, M3 Pro, M3 Max          | Fully supported (latest generation as of 2025)                        |
+| M4          | M4, M4 Pro, M4 Max          | Fully supported (latest generation released in 2024)                  |
+
+<Callout emoji="💡">
+  For Mac users, we recommend launching your worker through the terminal using the CLI commands.  
+  Detailed instructions can be found here: [Kuzco CLI Documentation](https://docs.kuzco.xyz/kuzco-cli).  
+  Navigate to the "CLI" tab in the "Launch Worker" section of the [Kuzco Dashboard](https://kuzco.xyz/dashboard) for specific steps.
+</Callout>
 
 
-| Node Type | Memory | CPU | Disk | Bandwidth | Additional Notes |
-|-----------|--------|-----|------|-----------|------------------|
-| DA Node   | 16 GB | 8 cores | 1 TB NVMe SSD | 100 MBps | For Download/Upload |
-| DA Client | 4 GB | 2 cores | 50 MB HDD or SSD | 100 MBps | For Download/Upload |
-| DA Retriever | 4 GB | 2 cores | 50 MB HDD or SSD | 100 MBps | For Download/Upload |
+## Supported GPUs
 
-## Validator Node Hardware Requirements
 
-Running a validator node in the 0G ecosystem means actively participating in the network's security and consensus through the Proof-of-Stake (PoS) mechanism. As a validator, you'll validate transactions, propose new blocks, and earn rewards for your contribution to the network's integrity and decentralization.
-
-| Component  | Mainnet | Testnet |
-|------------|---------|----------|
-| Memory     | 64 GB   | 64 GB    |
-| CPU        | 8 cores | 8 cores  |
-| Disk       | 1 TB NVME SSD | 4 TB NVME SSD |
-| Bandwidth  | 100 MBps for Download / Upload | 100 MBps for Download / Upload |
+| GPU Model | VRAM | Manufacturer |
+|-----------|------|--------------|
+| RTX 4090 | 24GB GDDR6X | NVIDIA |
+| RTX 4080 | 16GB GDDR6X | NVIDIA |
+| RTX 4000 | 8GB GDDR6 | NVIDIA |
+| RTX 3090 Ti | 8GB GDDR6X | NVIDIA |
+| RTX 3090 | 8GB GDDR6X | NVIDIA |
+| A10 | 24GB GDDR6 | NVIDIA |
+| A100 | 40GB/80GB HBM2e | NVIDIA |
+| A30 | 24GB HBM2 | NVIDIA |
+| A40 | 48GB GDDR6 | NVIDIA |
+| A4000 | 16GB GDDR6 | NVIDIA |
+| A5000 | 24GB GDDR6 | NVIDIA |
+| A6000 | 48GB GDDR6 | NVIDIA |
+| M60 | 16GB GDDR5 | NVIDIA |
+| P100 | 16GB HBM2 | NVIDIA |
+| P40 | 24GB GDDR5X | NVIDIA |
+| Quadro GP100 | 16GB HBM2 | NVIDIA |
+| Quadro GV100 | 32GB HBM2 | NVIDIA |
+| Quadro M6000 24GB | 24GB GDDR5 | NVIDIA |
+| Quadro P5000 | 16GB GDDR5X | NVIDIA |
+| Quadro P5200 | 16GB GDDR5 | NVIDIA |
+| Quadro P6000 | 24GB GDDR5X | NVIDIA |
+| RTX 5000 | 24GB GDDR6 | NVIDIA |
+| RTX 6000 | 48GB GDDR6 | NVIDIA |
+| RTX 8000 | 48GB GDDR6 | NVIDIA |
+| T4 | 16GB GDDR6 | NVIDIA |
+| TITAN RTX | 24GB GDDR6 | NVIDIA |
+| MI100 | 32GB HBM2 | AMD |
+| MI200 | 64GB HBM2e | AMD |
+| MI210 | 64GB HBM2e | AMD |
+| MI250 | 128GB HBM2e | AMD |
+| MI250X | 128GB HBM2e | AMD |
+| MI300 | 128GB HBM3 | AMD |
+| MI300A | 128GB HBM3 | AMD |
+| MI300X | 192GB HBM3 | AMD |
+| MI60 | 32GB HBM2 | AMD |
+| SSG | 16GB HBM2 | AMD |
+| V340 | 32GB HBM2 | AMD |
+| Vega II | 32GB HBM2 | AMD |
+| Vega II Duo | 2x32GB HBM2 | AMD |
+| VII | 16GB HBM2 | AMD |
+| W6800 | 32GB GDDR6 | AMD |
+| W6800X | 32GB GDDR6 | AMD |
+| W6800X Duo | 2x32GB GDDR6 | AMD |
+| W6900X | 32GB GDDR6 | AMD |
+| W7700 | 16GB GDDR6 | AMD |
+| W7800 | 32GB GDDR6 | AMD |
+| W7900 | 48GB GDDR6 | AMD |
+| 6800 | 16GB GDDR6 | AMD |
+| 6800 XT | 16GB GDDR6 | AMD |
+| 6900 XT | 16GB GDDR6 | AMD |
+| 6900 XTX | 16GB GDDR6 | AMD |
+| 6950 XT | 16GB GDDR6 | AMD |
+| 7600 XT | 16GB GDDR6 | AMD |
+| 7800 XT | 16GB GDDR6 | AMD |
+| 7900 GRE | 16GB GDDR6 | AMD |
+| 7900 XT | 20GB GDDR6 | AMD |
+| 7900 XTX | 24GB GDDR6 | AMD |
 
 
 # Software Requirements
@@ -53,35 +107,4 @@ Running a validator node in the 0G ecosystem means actively participating in the
 run this command to install Git.
 ```
 brew install git
-```
-
-4. Install Docker - https://www.docker.com/products/docker-desktop/
-
-## Software Requirements for VPS Users (Additional Only for VPS Users to Download Docker)
-
-```
-sudo apt update -y
-```
-```
-sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
-```
-```
-sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-```
-```
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-```
-```
-sudo apt update -y
-```
-```
-apt-cache policy docker-ce
-```
-```
-sudo apt install docker-ce -y
-```
-```
-sudo usermod -aG docker ${USER}
-su - ${USER}
-groups
 ```
