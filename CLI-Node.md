@@ -38,7 +38,8 @@ Then Put your Worker name & Press Enter
 OR
 
 4️⃣ Direct Start Node
-Copy the CLI command from the Kuzco Console and run it in your WSL terminal to start the worker
+
+- Copy the CLI command from the Kuzco Console and run it in your WSL terminal to start the worker
 
 For VPS Only
 ```
