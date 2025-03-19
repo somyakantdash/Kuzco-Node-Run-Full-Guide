@@ -1,5 +1,7 @@
 # Desktop Node Run Full Guide
 
+### Offical Docs Guide - https://docs.inference.supply/quick-start
+
 ## Make Account
 
 1. Register at [kuzco.xyz/register](https://kuzco.xyz/register)
