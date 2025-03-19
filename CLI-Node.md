@@ -35,6 +35,11 @@ kuzco init
 Then Put Your Registered Email ID & Password
 Then Put your Worker name & Press Enter
 
+OR
+
+4️⃣ Direct Start Node
+Copy the CLI command from the Kuzco Console and run it in your WSL terminal to start the worker
+
 For VPS Only
 ```
 PRESS CTRL+A+D (to run ur node continuously)
@@ -44,8 +49,5 @@ PRESS CTRL+A+D (to run ur node continuously)
 ## 🔶For Next Day Run This Command
 
 #1 Open WSL and Put this Command 
-```
-kuzco init
-```
-Then Put Your Registered Email ID & Password
-Then Put your Worker name & Press Enter
+
+Copy the CLI command from the Kuzco Console and run it in your WSL terminal to start the worker
